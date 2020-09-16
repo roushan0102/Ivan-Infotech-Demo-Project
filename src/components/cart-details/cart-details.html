@@ -1,0 +1,54 @@
+<div>
+  <h5>My Cart</h5>
+
+  <div *ngFor="let product of productList; let productIndex=index;">
+    <ion-card no-padding *ngIf="product.selectedProduct > 0">
+      <ion-row no-padding style="align-self: center;">
+        <ion-col class="container" col-5 style="text-align: -webkit-center;">
+          <img style="height: 80px; width: auto;" [src]="product.productImg" />
+          <div class="top-right">
+            <div class="zigzag">
+              <div style="font-size: 10px; font-weight: bold; margin-top: 18%;"> {{product.productDiscount}} % <br>OFF
+              </div>
+
+            </div>
+
+          </div>
+        </ion-col>
+        <ion-col col-7 no-padding>
+          <ion-card-content>
+            <ion-card-title no-padding style="font-weight: bold; font-size: 10px;">{{product.productName}}
+            </ion-card-title>
+            <p style="font-weight: bold; font-size: 8px;">₹ {{product.discountPrice}} &nbsp; &nbsp;<span
+                style="font-weight: normal; font-size: 10px;"><s>₹ {{product.productMrp}}</s> </span></p>
+            <p style="font-weight: bold; font-size: 14px; color: #72BB7B;">You saved ₹ {{product.savedAmount}}</p>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col offset-8 col-4 style="text-align: -webkit-center;">
+
+          <p>Quantity : {{product.selectedProduct}}</p>
+
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+  </div>
+
+</div>
+
+<div>
+  <ion-item>
+    <ion-row no-padding>
+      <ion-col col-6>
+        <p style="font-weight: bold; font-size: 18px; color: black;">
+          ₹ {{totalAmmount}}</p>
+      </ion-col>
+      <ion-col col-6>
+
+        <button color="danger" ion-button block>Proceed</button>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+</div>

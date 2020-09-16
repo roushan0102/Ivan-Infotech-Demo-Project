@@ -38,7 +38,10 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       hsl(0, 0%, 13%),
+  lightblue: #058CCE,
+  lightdark:#E6E6E6,
+  tabsbuttoncolor: #06B852
 );
 
 
@@ -86,3 +89,6 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+$tabs-md-tab-icon-color-active: #06B852;
+$tabs-md-tab-text-color-active: #06B852;

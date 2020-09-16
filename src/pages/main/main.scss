@@ -1,0 +1,57 @@
+page-main {
+    .form-field {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .form-field > * {
+        width: 100%;
+      }
+
+      .example-selected-value {
+        margin: 15px 0;
+      }
+
+      .mat-button-toggle-checked{
+        background-color: #058CCE;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      .top-right {
+        position: absolute;
+        top: 2%;
+        right: 60%;
+        color: red;
+      }
+
+      .zigzag {
+        width:40px;
+        height:40px;
+        color: white;
+        background:
+         radial-gradient(rgb(220, 29, 15) 60%,transparent 0%),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256'> <path d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(16.36deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(32.73deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(49.09deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(65.45deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(81.81deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(98.18deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(114.54deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(130.90deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(147.27deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>"),
+         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-97 -3 256 262' fill='white' width='256' style='transform:rotate(164.2deg);'> <path  d='M48 240 L48 16 L32 0 L16 16 L16 240 L32 256 Z' stroke='red' stroke-width='3' /></svg>");
+         background-size:100% 100%;
+     
+         display:inline-block;
+     }
+    }

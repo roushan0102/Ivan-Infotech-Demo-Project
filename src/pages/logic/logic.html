@@ -1,0 +1,103 @@
+<!--
+  Generated template for the LogicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Logic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h4>  Find out the users mothly wise income and yearly income and show in a list
+</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;">Month</p>
+      </ion-col>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;"> Amount</p>
+      </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let result of resultQuestion1">
+        <ion-col class="cell-class" col-6>
+          <p>{{months[result.month]}}</p>
+         </ion-col>
+         <ion-col class="cell-class" col-6>
+          <p>{{result.amount}}</p>
+         </ion-col>
+      </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;">Year</p>
+      </ion-col>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;"> Amount</p>
+      </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let result of resultQuestion1part2">
+        <ion-col class="cell-class" col-6>
+          <p>{{result.year}}</p>
+         </ion-col>
+         <ion-col class="cell-class" col-6>
+          <p>{{result.amount}}</p>
+         </ion-col>
+      </ion-row>
+  </ion-grid>
+
+  <h4>Find User minimum individual income : {{findMinValue(obj)}}</h4>
+  <h4>Find User maximum individual income : {{findMaxValue(obj)}}</h4>
+
+  <h4>Find out which month user  income lowest</h4>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;">Month</p>
+      </ion-col>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;"> Amount</p>
+      </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col class="cell-class" col-6>
+          <p>{{sortedData[0].date}}</p>
+         </ion-col>
+         <ion-col class="cell-class" col-6>
+          <p>{{sortedData[0].earning_amount}}</p>
+         </ion-col>
+      </ion-row>
+      </ion-grid>
+
+
+      <h4>Find out which month user  income maximum</h4>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;">Month</p>
+      </ion-col>
+      <ion-col class="cell-class" col-6>
+       <p style="font-weight: bold;"> Amount</p>
+      </ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col class="cell-class" col-6>
+          <p>{{sortedData[sortedData.length-1].date}}</p>
+         </ion-col>
+         <ion-col class="cell-class" col-6>
+          <p>{{sortedData[sortedData.length-1].earning_amount}}</p>
+         </ion-col>
+      </ion-row>
+      </ion-grid>
+
+  
+  
+</ion-content>

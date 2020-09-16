@@ -1,9 +1,41 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+  <div style="background-color: #EA3F33;">
+    <mat-grid-list cols="12">
+      <mat-grid-tile [colspan]="tile.sidemenu.cols" [rowspan]="tile.sidemenu.rows">
+        <button clear large color="light" ion-button menuToggle>
+          <ion-icon style="transform: rotate(180deg);font-size: 33px;" ios="ios-list" md="md-list"></ion-icon>
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="tile.title.cols" [rowspan]="tile.title.rows">
+        <button block style="text-align: left; text-transform:none" ion-button clear color="light">Set Delivery Location
+          <br> Tap here to select delivery location </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="tile.cart.cols" [rowspan]="tile.cart.rows">
+        <button clear large color="light" ion-button menuToggle>
+
+          <ion-icon style="font-size: 33px; " ios="ios-cart" md="md-cart"></ion-icon>
+          <div *ngIf="totalSelectedProduct > 0" style="margin-top: -17px;margin-left: -1px;">
+            <ion-badge style="background-color: #EA3F33;border-style: solid;border-width: 2px;border-radius: 43%; ">{{totalSelectedProduct}}
+            </ion-badge>
+          </div>
+        </button>
+      </mat-grid-tile>
+
+      <mat-grid-tile style="margin-left: 4%;" [colspan]="tile.category.cols" [rowspan]="tile.category.rows">
+        <button ion-button color="light" round>Categories</button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="tile.search.cols" [rowspan]="tile.search.rows">
+
+
+        <mat-form-field class="form-field">
+          <input matInput type="text" placeholder="Search Product" [(ngModel)]="value" />
+          <ion-icon style="font-size: 18px;" color="light" matPrefix ios="ios-search" md="md-search"></ion-icon>
+        </mat-form-field>
+
+
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 </ion-header>
 
 <ion-content padding>

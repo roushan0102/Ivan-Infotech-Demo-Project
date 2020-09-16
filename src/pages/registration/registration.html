@@ -1,0 +1,62 @@
+<ion-content style="background: #c3c3c3;">
+
+  <div style="margin: 4%;">
+    <p style="font-size: 16px;font-weight: bold;">Insurance Agent Registration</p>
+    <P>Please use valid information to careate your account</P>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div>
+            <img class='circle-pic' style=" margin-top: 20px" src="assets/person.png">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <form #loginform='' [formGroup]="formGroup">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="person" style="font-size: 16px;" item-left></ion-icon>
+        </ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <ion-icon ios="ios-mail" md="md-mail" style="font-size: 16px;" item-left></ion-icon>
+        </ion-label>
+        <ion-input formControlName="email"  type="email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon ios="ios-call" md="md-call" style="font-size: 16px;" item-left></ion-icon>
+        </ion-label>
+        <ion-input formControlName="phone"  type="tel" placeholder="Phone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon ios="ios-lock" md="md-lock" style="font-size: 16px;" item-left></ion-icon>
+        </ion-label>
+        <ion-input formControlName="password" [type]="showPassword ? 'text' : 'password'" placeholder="Password"></ion-input>
+        <button (click)="onPasswordToggle()" ion-button clear small item-end icon-only>
+          <ion-icon [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon ios="ios-lock" md="md-lock" style="font-size: 16px;" item-left></ion-icon>
+        </ion-label>
+        <ion-input formControlName="cPassword"  [type]="showPassword ? 'text' : 'password'" placeholder="Confirm Password"></ion-input>
+        <button (click)="onPasswordToggle()" ion-button clear small item-end icon-only>
+          <ion-icon [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+        </button>
+      </ion-item>
+      <mat-checkbox  formControlName="terms" style="margin-left:2%">I agree to <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a> </mat-checkbox>
+    </form>
+
+    <div style="margin: 4%;">
+    <button (click)="register()"  color="tabsbuttoncolor" ion-button block>Register</button>
+  </div>
+  </div>
+</ion-content>
